@@ -197,7 +197,6 @@ systemctl start quota limit-ip-vless
 systemctl enable quota limit-ip-vless
 cd
 
-
 clear
 echo -e "clear ; menu" > /root/.profile
 
@@ -209,3 +208,4 @@ echo -e "Success Create Swap Ram"
 # Notification
 echo -e " Script Success Install"
 rm -fr *.sh
+reboot
