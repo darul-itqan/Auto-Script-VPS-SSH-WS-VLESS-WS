@@ -160,7 +160,7 @@ chmod 644 /etc/xray/xray.crt
 bash <(curl -s https://raw.githubusercontent.com/FN-Rerechan02/tools/refs/heads/main/nginx.sh)
 systemctl stop nginx
 wget -qO /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Rerechan-Team/websocket-proxy/fn_project/nginx.conf"
-wget -qO /etc/nginx/fn.conf "https://codeberg.org/Rerechan02/scvpn/raw/branch/main/files/rerechan.conf"
+wget -qO /etc/nginx/fn.conf "https://https://github.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS-/blob/main/darqan.conf"
 sed -i "s|xxx|${domain}|g" /etc/nginx/fn.conf
 systemctl daemon-reload
 systemctl start nginx
