@@ -165,6 +165,12 @@ sed -i "s|xxx|${domain}|g" /etc/nginx/fn.conf
 systemctl daemon-reload
 systemctl start nginx
 
+# Buat sijil sementara (self-signed)
+sudo mkdir -p /etc/xray
+sudo openssl req -x509 -newkey rsa:2048 -days 365 -nodes \
+  -keyout /etc/xray/xray.key -out /etc/xray/xray.crt \
+  -subj "/CN=localhost"
+
 # Setup Crontab
 apt install cron -y
 
