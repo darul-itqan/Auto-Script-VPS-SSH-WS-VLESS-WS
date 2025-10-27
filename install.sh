@@ -81,7 +81,7 @@ rm -f dropbear
 wget -qO dropbear "https://codeberg.org/Rerechan02/scvpn/raw/branch/main/files/dropbear"
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
-echo -e "DarQan VPN" > /etc/issue.net
+echo -e "Premium VPN" > /etc/issue.net
 clear
 systemctl daemon-reload
 /etc/init.d/dropbear restart
