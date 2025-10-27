@@ -12,3 +12,17 @@ If disconnect in installation process, just relogin and copy-paste this command
 ```shell
 screen -r rere
 ```
+
+## Features & Options DarQan Auto Script
+1. Hanya protocol SSH WS & VLESS WS sahaja.
+2. Custom UUID.
+3. Custom path (VLESS).
+4. Limit IP setiap user (had device login).
+5. Limit data (GB) setiap user.
+6. Check online user.
+7. Auto delete multi login user.
+8. Boleh recovery expired & deleted user.
+9. BBR Plus & performance tweak.
+10. Auto swap RAM 1GB.
+11. Auto Reboot jam 5:00AM setiap hari.
+12. Auto clean log & cache setiap minggu.
