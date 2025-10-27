@@ -21,8 +21,9 @@ screen -r rere
 5. Limit data (GB) setiap user.
 6. Check online user.
 7. Auto delete multi login user.
-8. Boleh recovery expired & deleted user.
-9. BBR Plus & performance tweak.
-10. Auto swap RAM 1GB.
-11. Auto Reboot jam 5:00AM setiap hari.
-12. Auto clean log & cache setiap minggu.
+8. Auto delete expired account.
+9. Boleh recovery expired & deleted account.
+10. BBR Plus & performance tweak.
+11. Auto swap RAM 1GB.
+12. Auto Reboot jam 5:00AM setiap hari.
+13. Auto clean log & cache setiap minggu.
