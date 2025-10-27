@@ -13,7 +13,7 @@ apt install lolcat -y
 gem install lolcat
 
 # Fix DNS
-cat <(echo "nameserver 8.8.8.8") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf && cat <(echo "nameserver 1.1.1.1") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf
+cat <(echo "nameserver 103.6.148.6") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf && cat <(echo "nameserver 103.6.148.60") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf
 
 # Fix Port OpenSSH
 cd /etc/ssh
@@ -58,7 +58,7 @@ while true; do
     if [[ -n "$domain" ]]; then
         break
     else
-        echo -e "\e[31m[!] Domain tidak boleh kosong, silakan ulangi.\e[0m"
+        echo -e "\e[31m[!] Domain wajib diisi. Sila ulangi.\e[0m"
     fi
 done
 
@@ -92,7 +92,7 @@ rm -fr dropbear*
 # Install SSH WebSocket
 apt install python3 -y
 cd /usr/local/bin
-wget -qO proxy "https://codeberg.org/Rerechan02/scvpn/raw/branch/main/biner/proxy"
+wget -qO proxy "https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/main/proxy"
 chmod +x proxy
 cd /etc/systemd/system
 wget -qO ssh-ws.service "https://codeberg.org/Rerechan02/scvpn/raw/branch/main/service/ssh-ws.service"
