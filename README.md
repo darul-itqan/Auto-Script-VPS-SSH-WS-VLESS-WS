@@ -1,5 +1,4 @@
-# Auto script VPS
-## SSH WebSocket & VLESS WebSocket
+# Auto script VPS - SSH WebSocket & VLESS WebSocket
 ## for Debian 11 & 12
 
 ## Install
