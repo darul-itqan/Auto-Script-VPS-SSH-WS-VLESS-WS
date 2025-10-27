@@ -1,4 +1,4 @@
-# Auto script VPS - SSH WebSocket & VLESS WebSocket
+# DarQan Auto script VPS - SSH WebSocket & VLESS WebSocket
 ## for Debian 11 & 12
 
 ## Install
@@ -24,5 +24,5 @@ screen -r rere
 9. Boleh recovery expired & deleted account.
 10. BBR Plus & performance tweak.
 11. Auto swap RAM 1GB.
-12. Auto Reboot jam 5:00AM setiap hari.
+12. Auto reboot jam 5:00AM setiap hari.
 13. Auto clean log & cache setiap minggu.
