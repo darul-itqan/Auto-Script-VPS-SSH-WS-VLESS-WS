@@ -39,7 +39,7 @@ mkdir -p /etc/xray/usage/quota/vless
 cd /usr/local/sbin
 apt update
 apt install zip unzip -y
-wget -qO menu.zip "https://codeberg.org/Rerechan02/scvpn/raw/branch/main/mm.zip"
+wget -qO menu.zip "https://github.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/raw/refs/heads/main/menu.zip"
 unzip menu.zip
 rm -f menu.zip
 chmod +x *
