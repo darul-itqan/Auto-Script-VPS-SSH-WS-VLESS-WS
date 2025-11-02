@@ -210,7 +210,7 @@ echo -e "clear ; menu" > /root/.profile
 
 # Create Swap RAM
 echo -e "Creating Swap Ram"
-sh <(curl -s https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/main/swap.sh)
+sh <(curl -s https://raw.githubusercontent.com/FN-Rerechan02/tools/refs/heads/main/swap.sh)
 echo -e "Success Create Swap Ram"
 
 # Auto Reboot 5:00AM
