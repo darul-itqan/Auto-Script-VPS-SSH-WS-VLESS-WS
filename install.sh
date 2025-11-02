@@ -13,7 +13,7 @@ apt install lolcat -y
 gem install lolcat
 
 # Fix DNS
-cat <(echo "nameserver 103.6.148.6") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf && cat <(echo "nameserver 103.6.148.60") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf
+cat <(echo "nameserver 8.8.8.8") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf && cat <(echo "nameserver 1.1.1.1") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf
 
 # Fix Port OpenSSH
 cd /etc/ssh
@@ -81,7 +81,21 @@ rm -f dropbear
 wget -qO dropbear "https://codeberg.org/Rerechan02/scvpn/raw/branch/main/files/dropbear"
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
-echo -e "Premium VPN" > /etc/issue.net
+echo -e "# Banner VPN SSH
+<p style="text-align:center"><b>
+<br><font color='green'><b>┏━━━━━━━ ✫ ━━━━━━━┓</b></font>
+<br><font color='#FFA500'><b>🌐 DarQan VPN Premium</b></font>
+<br><font color='green'><b>┗━━━━━━━━━━━━━━━━━┛</b><br></font>
+<br><font color='#FF000E'>&ensp;⚠️ SILA PATUH❗️</font>
+<br><font color='#8A95FF'>&ensp;❌ Multi login</font>
+<br><font color='#52fc03'>&ensp;❌ Torrent</font>
+<br><font color='#FF69B4'>&ensp;❌ DDOS</font>
+<br>
+<br><font color='#FFA500'><b>┏━━━━━━━━ DarQan VPN ━━━━━━━━━┓</b></font>
+<br><font color='#8A95FF'><b>🇲🇾 Server MY (Shinjiru)</b></font>
+<br><font color='yellow'><b>🚀 Max speed: 200 Mbps</b></font>
+<br><font color='#FF69B4'><b>📝 Beli VPN: Telegram @HarisTakiri</b></font>
+<br><font color='#FFA500'><b>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</b><br></font>" > /etc/issue.net
 clear
 systemctl daemon-reload
 /etc/init.d/dropbear restart
