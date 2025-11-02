@@ -13,7 +13,7 @@ apt install lolcat -y
 gem install lolcat
 
 # Fix DNS
-cat <(echo "nameserver 8.8.8.8") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf && cat <(echo "nameserver 1.1.1.1") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf
+cat <(echo "nameserver 103.6.148.6") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf && cat <(echo "nameserver 103.6.148.60") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf
 
 # Fix Port OpenSSH
 cd /etc/ssh
@@ -179,12 +179,6 @@ sed -i "s|xxx|${domain}|g" /etc/nginx/fn.conf
 systemctl daemon-reload
 systemctl start nginx
 
-# Buat sijil sementara (self-signed)
-sudo mkdir -p /etc/xray
-sudo openssl req -x509 -newkey rsa:2048 -days 365 -nodes \
-  -keyout /etc/xray/xray.key -out /etc/xray/xray.crt \
-  -subj "/CN=localhost"
-
 # Setup Crontab
 apt install cron -y
 
@@ -216,7 +210,7 @@ echo -e "clear ; menu" > /root/.profile
 
 # Create Swap RAM
 echo -e "Creating Swap Ram"
-sh <(curl -s https://raw.githubusercontent.com/FN-Rerechan02/tools/refs/heads/main/swap.sh)
+sh <(curl -s https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/main/swap.sh)
 echo -e "Success Create Swap Ram"
 
 # Auto Reboot 5:00AM
