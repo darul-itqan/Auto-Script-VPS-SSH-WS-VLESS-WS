@@ -13,7 +13,7 @@ apt install lolcat -y
 gem install lolcat
 
 # Fix DNS
-cat <(echo "nameserver 103.6.148.6") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf && cat <(echo "nameserver 103.6.148.60") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf
+echo -e "nameserver 103.6.148.6\nnameserver 103.6.148.60" > /etc/resolv.conf
 
 # Fix Port OpenSSH
 cd /etc/ssh
@@ -162,7 +162,7 @@ apt install lsof socat certbot -y
 port=$(lsof -i:80 | awk '{print $1}')
 systemctl stop apache2
 systemctl disable apache2
-pkill $port
+fuser -k 80/tcp >/dev/null 2>&1
 yes Y | certbot certonly --standalone --preferred-challenges http --agree-tos --email dindaputri@rerechanstore.eu.org -d $domain 
 cp /etc/letsencrypt/live/$domain/fullchain.pem /etc/xray/xray.crt
 cp /etc/letsencrypt/live/$domain/privkey.pem /etc/xray/xray.key
@@ -189,11 +189,11 @@ echo "0 0 * * * root backup" >> /etc/crontab
 echo "0 0 * * * root fixlog" >> /etc/crontab
 
 # restart service
-systemctl daemon-relaod
+systemctl daemon-reload
 systemctl restart cron
 
 # Install Package Lain
-curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+curl -fsSL https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
 sudo apt-get install speedtest
 
 # Setup Limit IP & Quota
@@ -210,7 +210,7 @@ echo -e "clear ; menu" > /root/.profile
 
 # Create Swap RAM
 echo -e "Creating Swap Ram"
-sh <(curl -s https://raw.githubusercontent.com/FN-Rerechan02/tools/refs/heads/main/swap.sh)
+bash <(curl -s https://raw.githubusercontent.com/FN-Rerechan02/tools/refs/heads/main/swap.sh)
 echo -e "Success Create Swap Ram"
 
 # Auto Reboot 5:00AM
