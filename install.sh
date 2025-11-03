@@ -162,7 +162,7 @@ apt install lsof socat certbot -y
 port=$(lsof -i:80 | awk '{print $1}')
 systemctl stop apache2
 systemctl disable apache2
-fuser -k 80/tcp >/dev/null 2>&1
+pkill $port
 yes Y | certbot certonly --standalone --preferred-challenges http --agree-tos --email dindaputri@rerechanstore.eu.org -d $domain 
 cp /etc/letsencrypt/live/$domain/fullchain.pem /etc/xray/xray.crt
 cp /etc/letsencrypt/live/$domain/privkey.pem /etc/xray/xray.key
