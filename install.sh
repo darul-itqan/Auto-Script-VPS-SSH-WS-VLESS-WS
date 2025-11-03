@@ -13,7 +13,7 @@ apt install lolcat -y
 gem install lolcat
 
 # Fix DNS
-echo -e "nameserver 103.6.148.6\nnameserver 103.6.148.60" > /etc/resolv.conf
+cat <(echo "nameserver 103.6.148.6") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf && cat <(echo "nameserver 103.6.148.60") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf
 
 # Fix Port OpenSSH
 cd /etc/ssh
@@ -48,9 +48,9 @@ cd
 # Set Data Domain Server
 clear
 echo -e "
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++
             INPUT DOMAIN FOR SERVER
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++
 "
 
 while true; do
