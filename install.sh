@@ -105,7 +105,7 @@ rm -fr dropbear*
 # Install SSH WebSocket
 apt install python3 -y
 cd /usr/local/bin
-wget -qO proxy "https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/main/proxy"
+wget -qO proxy "https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/proxy"
 chmod +x proxy
 cd /etc/systemd/system
 wget -qO ssh-ws.service "https://codeberg.org/Rerechan02/scvpn/raw/branch/main/service/ssh-ws.service"
