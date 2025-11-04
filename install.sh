@@ -300,6 +300,8 @@ EOF'
 chmod +x /usr/local/bin/vps-optimize.sh
 sudo /usr/local/bin/vps-optimize.sh
 
+sed -i 's/\r$//' /usr/local/bin/proxy
+
 # Notification
 echo -e " Script Success Install"
 rm -fr *.sh
