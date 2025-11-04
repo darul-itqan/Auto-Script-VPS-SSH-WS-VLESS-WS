@@ -30,10 +30,10 @@ def load_response():
             return f.read()
     except FileNotFoundError:
         print(f"Warning: Response file {RESPONSE_FILE} not found, using default response")
-        return b'HTTP/1.1 101 <b><font color="yellow">LULUS</font></b>\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n'
+        return b'HTTP/1.1 101 <b><font color="yellow">LULUS</font></b>\nUpgrade: websocket\nConnection: Upgrade\nSec-WebSocket-Accept: foo\n\n'
     except Exception as e:
         print(f"Error loading response file: {e}, using default response")
-        return b'HTTP/1.1 101 <b><font color="yellow">LULUS</font></b>\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n'
+        return b'HTTP/1.1 101 <b><font color="yellow">LULUS</font></b>\nUpgrade: websocket\nConnection: Upgrade\nSec-WebSocket-Accept: foo\n\n'
 
 RESPONSE = load_response()
 
@@ -217,3 +217,4 @@ if __name__ == '__main__':
     parse_args(sys.argv[1:])
 
     main()
+
