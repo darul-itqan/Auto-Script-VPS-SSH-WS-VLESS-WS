@@ -81,8 +81,7 @@ rm -f dropbear
 wget -qO dropbear "https://codeberg.org/Rerechan02/scvpn/raw/branch/main/files/dropbear"
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
-echo -e "# Banner VPN SSH
-<p style="text-align:center"><b>
+echo -e "
 <br><font color='green'><b>┏━━━━━━━ ✫ ━━━━━━━┓</b></font>
 <br><font color='#FFA500'><b>🌐 DarQan VPN Premium</b></font>
 <br><font color='green'><b>┗━━━━━━━━━━━━━━━━━┛</b><br></font>
