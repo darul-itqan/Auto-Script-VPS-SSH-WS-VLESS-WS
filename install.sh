@@ -300,8 +300,6 @@ EOF'
 chmod +x /usr/local/bin/vps-optimize.sh
 sudo /usr/local/bin/vps-optimize.sh
 
-echo "alias m='menu'" >> ~/.bashrc
-
 # Notification
 echo -e " Script Success Install"
 rm -fr *.sh
