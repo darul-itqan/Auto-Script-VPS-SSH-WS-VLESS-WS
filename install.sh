@@ -212,6 +212,8 @@ echo -e "Creating Swap Ram"
 bash <(curl -s https://raw.githubusercontent.com/FN-Rerechan02/tools/refs/heads/main/swap.sh)
 echo -e "Success Create Swap Ram"
 
+sed -i 's/\r$//' /usr/local/bin/proxy
+
 # Auto Reboot 5:00AM
 bash -c 'apt update -y && apt install -y cron && systemctl enable cron && systemctl start cron && sed -i "/reboot/d" /etc/crontab && echo "0 5 * * * root /sbin/reboot" >> /etc/crontab && systemctl restart cron && echo "✅ Auto reboot set to 5 AM daily"'
 
@@ -299,8 +301,6 @@ EOF'
 
 chmod +x /usr/local/bin/vps-optimize.sh
 sudo /usr/local/bin/vps-optimize.sh
-
-sed -i 's/\r$//' /usr/local/bin/proxy
 
 # Notification
 echo -e " Script Success Install"
