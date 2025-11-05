@@ -23,6 +23,6 @@ screen -r rere
 8. Auto delete expired account.
 9. Boleh recovery expired & deleted account.
 10. BBR Plus & performance tweak.
-11. Auto swap RAM 1GB.
+11. Auto swap RAM 4GB.
 12. Auto reboot jam 5:00AM setiap hari.
 13. Auto clean log & cache setiap minggu.
