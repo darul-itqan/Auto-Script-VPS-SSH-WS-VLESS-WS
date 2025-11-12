@@ -134,7 +134,7 @@ wget -q -O /etc/xray/config.json "https://codeberg.org/Rerechan02/scvpn/raw/bran
 cd /etc/xray
 uuid=$(cat /proc/sys/kernel/random/uuid)
 sed -i "s|xxxxx|${uuid}|g" /etc/xray/config.json
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 25.8.31
+wget -q -O /usr/bin/xraychanger2 "https://raw.githubusercontent.com/NevermoreSSH/Xcore-custompath/main/xraychanger2.sh" && chmod +x /usr/bin/xraychanger2
 
 # Fix Service Xray
 cd /var/log
