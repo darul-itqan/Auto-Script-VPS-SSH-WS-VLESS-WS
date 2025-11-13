@@ -135,7 +135,6 @@ cd /etc/xray
 uuid=$(cat /proc/sys/kernel/random/uuid)
 sed -i "s|xxxxx|${uuid}|g" /etc/xray/config.json
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 25.8.31
-wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/NevermoreSSH/Xcore-custompath/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger
 
 # Fix Service Xray
 cd /var/log
@@ -303,7 +302,9 @@ EOF'
 chmod +x /usr/local/bin/vps-optimize.sh
 sudo /usr/local/bin/vps-optimize.sh
 
+wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/NevermoreSSH/Xcore-custompath/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger
+
 # Notification
-echo -e " Script Success Install"
+echo -e "Script Success Install."
 rm -fr *.sh
 reboot
