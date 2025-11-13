@@ -134,11 +134,7 @@ wget -q -O /etc/xray/config.json "https://codeberg.org/Rerechan02/scvpn/raw/bran
 cd /etc/xray
 uuid=$(cat /proc/sys/kernel/random/uuid)
 sed -i "s|xxxxx|${uuid}|g" /etc/xray/config.json
-wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/NevermoreSSH/Xcore-custompath/main/xraychanger.sh"
-chmod +x /usr/bin/xraychanger
-xraychanger
-89
-clear
+wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/NevermoreSSH/Xcore-custompath/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger
 
 # Fix Service Xray
 cd /var/log
