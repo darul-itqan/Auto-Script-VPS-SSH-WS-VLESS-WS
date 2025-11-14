@@ -37,9 +37,9 @@ clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
 echo -e "\e[48;5;226;1;38;5;88m            XRAY CORE VERSION           \e[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
-echo -e "\033[1;37m Xray Core Changer by NevermoreSSH\033[0m"
+echo -e "\033[1;37m    Xray Core Changer by NevermoreSSH\033[0m"
 echo -e "
-\033[1;36m\033[0m   Current version : ${HT}v${current_version} ${NC}
+${BIWhite}  Current version : ${HT}v${current_version} ${NC}
  
   [\033[1;36m 1 \033[0m] Xray Core v1.5.4
   [\033[1;36m 2 \033[0m] Xray Core v1.6.1
@@ -52,13 +52,13 @@ echo -e "
   [\033[1;36m 8 \033[0m] Xray Core MOD v1.7.2-1
   [\033[1;36m 9 \033[0m] Xray Core MOD v25.3.31
 
-  \033[1;36m  10.\033[0m Check Xray Core Version
-  \033[1;36m  00.\033[0m Back to Main Menu
+  \033[1;36m 10.\033[0m Check Xray Core Version
+  \033[1;36m 00.\033[0m Back to Main Menu
 
 ✅ Xray Core MOD support custom / multi path.
 ⚠️ Please reboot your VPS after change the version."
 echo ""
-read -p "Select options from 1–99 : " xcore
+read -p "     Select options from 1–99 : " xcore
 echo -e ""
 case $xcore in
 1)
