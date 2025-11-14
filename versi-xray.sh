@@ -35,7 +35,7 @@ latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases |
 xraycore_link="https://github.com/XTLS/Xray-core/releases/download/v$latest_version/Xray-linux-64.zip"
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
-echo -e "\e[48;5;226;1;38;5;88m         XRAY CORE MOD VERSION         \e[0m"
+echo -e "\e[48;5;226;1;38;5;88m            XRAY CORE VERSION           \e[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
 echo -e "\033[1;37m Xray Core Changer by NevermoreSSH\033[0m"
 echo -e "
