@@ -48,9 +48,9 @@ ${BIWhite}  Current version : ${HT}v${current_version} ${NC}
   [\033[1;36m 5 \033[0m] Xray Core v1.8.4
   [\033[1;36m 6 \033[0m] Xray Core v${latest_version} ${HT}<< latest${NC}
  
-  [\033[1;36m 7 \033[0m] Xray Core MOD v1.6.5   
-  [\033[1;36m 8 \033[0m] Xray Core MOD v1.7.2-1
-  [\033[1;36m 9 \033[0m] Xray Core MOD v25.3.31
+  [\033[1;36m 7 \033[0m] Xray Core Mod v1.6.5   
+  [\033[1;36m 8 \033[0m] Xray Core Mod v1.7.2-1
+  [\033[1;36m 9 \033[0m] Xray Core Mod v25.3.31
 
   \033[1;36m 10.\033[0m Check Xray Core Version
   \033[1;36m 00.\033[0m Back to Main Menu
