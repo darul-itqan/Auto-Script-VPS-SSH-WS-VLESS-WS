@@ -35,36 +35,30 @@ latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases |
 xraycore_link="https://github.com/XTLS/Xray-core/releases/download/v$latest_version/Xray-linux-64.zip"
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
-echo -e "\e[48;5;226;1;38;5;88m                XRAY CORE MOD VERSION                \e[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC} | lolcat
-\033[1;37mXray Core Changer by NevermoreSSH\033[0m
-\033[1;37mTelegram : https://t.me/todfix667 \033[0m"
-echo -e 
+echo -e "\e[48;5;226;1;38;5;88m         XRAY CORE MOD VERSION         \e[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+echo -e "\033[1;37m Xray Core Changer by NevermoreSSH\033[0m"
 echo -e "
-\033[1;36m\033[0m Current version : ${orange}v${current_version} ${NC}
+\033[1;36m\033[0m   Current version : ${HT}v${current_version} ${NC}
  
- [\033[1;36m 1 \033[0m] Xray Core v1.5.4
- [\033[1;36m 2 \033[0m] Xray Core v1.6.1
- [\033[1;36m 3 \033[0m] Xray Core v1.7.2
- [\033[1;36m 4 \033[0m] Xray Core v1.7.5
- [\033[1;36m 5 \033[0m] Xray Core v1.8.4
- [\033[1;36m 6 \033[0m] Xray Core v${latest_version} ${green} << Latest ${NC}
+  [\033[1;36m 1 \033[0m] Xray Core v1.5.4
+  [\033[1;36m 2 \033[0m] Xray Core v1.6.1
+  [\033[1;36m 3 \033[0m] Xray Core v1.7.2
+  [\033[1;36m 4 \033[0m] Xray Core v1.7.5
+  [\033[1;36m 5 \033[0m] Xray Core v1.8.4
+  [\033[1;36m 6 \033[0m] Xray Core v${latest_version} ${HT}<< latest${NC}
  
- [\033[1;36m 7 \033[0m] Xray Core MOD v1.6.5   
- [\033[1;36m 8 \033[0m] Xray Core MOD v1.7.2-1
- [\033[1;36m 9 \033[0m] Xray Core MOD v25.3.31
+  [\033[1;36m 7 \033[0m] Xray Core MOD v1.6.5   
+  [\033[1;36m 8 \033[0m] Xray Core MOD v1.7.2-1
+  [\033[1;36m 9 \033[0m] Xray Core MOD v25.3.31
 
- [\033[1;36m 99 \033[0m] Check Xray Core Version
- [\033[1;36m 0 \033[0m] Back to Main Menu
+  \033[1;36m  10.\033[0m Check Xray Core Version
+  \033[1;36m  00.\033[0m Back to Main Menu
 
- Notes: 
-❇️ Please restart / reboot VPS after change Xray Core.
-❇️ If you using old XTLS, downgrade Xray Core v1.7.5 or lower.
-❇️ Xray Core MOD support custom path / multi path. Only use it if your scripts support."
+✅ Xray Core MOD support custom / multi path.
+⚠️ Please reboot your VPS after change the version."
 echo ""
-echo -e "\033[1;37mPress [ Ctrl+C ] to exit script.\033[0m"
-echo ""
-read -p "Select options from [1–99] : " xcore
+read -p "Select options from 1–99 : " xcore
 echo -e ""
 case $xcore in
 1)
@@ -123,7 +117,7 @@ mv $xrays_path $xrays_path.bakk && curl -L https://github.com/NevermoreSSH/Xcore
 read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
 xraychanger
 ;;
-99)
+10)
 clear
 xray version
 echo -e "[ ${green}INFO${NC} ] Back to menu in 5 sec . . . "
