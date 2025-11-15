@@ -89,7 +89,6 @@ echo -e "
 <br><font color='#8A95FF'>&ensp;<b> ❌ Multi login</b></font>
 <br><font color='#52fc03'>&ensp;<b> ❌ Torrent</b></font>
 <br><font color='#FF69B4'>&ensp;<b> ❌ DDOS</b></font>
-<br>
 <br><font color='#FFA500'><b> ┏━━━━━━━━ DarQan VPN ━━━━━━━━━┓</b></font>
 <br><font color='#8A95FF'><b> 🇲🇾 Server MY (Shinjiru)</b></font>
 <br><font color='yellow'><b> 🚀 Max speed: 200 Mbps</b></font>
