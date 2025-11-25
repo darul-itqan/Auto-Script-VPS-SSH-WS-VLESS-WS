@@ -39,26 +39,26 @@ echo -e "\e[48;5;226;1;38;5;88m            XRAY CORE VERSION           \e[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
 echo -e "\033[1;37m    Xray Core Changer by NevermoreSSH\033[0m"
 echo -e "
-${BIWhite}  Current version : ${HT}v${current_version} ${NC}
+${BIWhite}       Current version : ${HT}v${current_version} ${NC}
  
-  [\033[1;36m 1 \033[0m] Xray Core v1.5.4
-  [\033[1;36m 2 \033[0m] Xray Core v1.6.1
-  [\033[1;36m 3 \033[0m] Xray Core v1.7.2
-  [\033[1;36m 4 \033[0m] Xray Core v1.7.5
-  [\033[1;36m 5 \033[0m] Xray Core v1.8.4
-  [\033[1;36m 6 \033[0m] Xray Core v${latest_version} ${HT}<< latest${NC}
+   [\033[1;36m 1 \033[0m] Xray Core v1.5.4
+   [\033[1;36m 2 \033[0m] Xray Core v1.6.1
+   [\033[1;36m 3 \033[0m] Xray Core v1.7.2
+   [\033[1;36m 4 \033[0m] Xray Core v1.7.5
+   [\033[1;36m 5 \033[0m] Xray Core v1.8.4
+   [\033[1;36m 6 \033[0m] Xray Core v${latest_version} ${HT}< latest${NC}
  
-  [\033[1;36m 7 \033[0m] Xray Core Mod v1.6.5   
-  [\033[1;36m 8 \033[0m] Xray Core Mod v1.7.2-1
-  [\033[1;36m 9 \033[0m] Xray Core Mod v25.3.31
+   [\033[1;36m 7 \033[0m] Xray Core Mod v1.6.5   
+   [\033[1;36m 8 \033[0m] Xray Core Mod v1.7.2-1
+   [\033[1;36m 9 \033[0m] Xray Core Mod v25.3.31
 
-  \033[1;36m 10.\033[0m Check Xray Core Version
-  \033[1;36m 00.\033[0m Back to Main Menu
-
-✅ Xray Core MOD support custom / multi path.
-⚠️ Please reboot your VPS after change the version."
-echo ""
-read -p "     Select options from 1–99 : " xcore
+  \033[1;36m  10.\033[0m Check Xray Core Version
+  \033[1;36m   0.\033[0m Back to main menu"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+echo -e " ✅ Xray Core Mod support custom / multi path."
+echo -e " ⚠️ Please reboot your VPS after change the version."
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+read -p "      Select options from 1–10 : " xcore
 echo -e ""
 case $xcore in
 1)
