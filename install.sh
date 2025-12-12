@@ -302,6 +302,9 @@ EOF'
 chmod +x /usr/local/bin/vps-optimize.sh
 sudo /usr/local/bin/vps-optimize.sh
 
+apt update -y
+apt install jq -y
+
 # Notification
 echo -e "Script Success Install."
 rm -fr *.sh
