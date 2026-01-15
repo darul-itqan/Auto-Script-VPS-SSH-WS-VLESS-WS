@@ -184,15 +184,15 @@ apt install cron -y
 # Setup Auto Backup
 echo "* * * * * root xp-ssh" >> /etc/crontab
 echo "* * * * * root xp-vless" >> /etc/crontab
-echo "0 0 * * * root backup" >> /etc/crontab
-echo "0 0 * * * root fixlog" >> /etc/crontab
+echo "3 0 * * * root backup" >> /etc/crontab
+echo "5 0 * * * root fixlog" >> /etc/crontab
 
 # restart service
 systemctl daemon-reload
 systemctl restart cron
 
 # Install Package Lain
-curl -fsSL https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
 sudo apt-get install speedtest
 
 # Setup Limit IP & Quota
@@ -208,9 +208,9 @@ clear
 echo -e "clear ; menu" > /root/.profile
 
 # Create Swap RAM
-echo -e "Creating Swap Ram"
+echo -e "Creating Swap RAM"
 bash <(curl -s https://raw.githubusercontent.com/FN-Rerechan02/tools/refs/heads/main/swap.sh)
-echo -e "Success Create Swap Ram"
+echo -e "Success Create Swap RAM"
 
 sed -i 's/\r$//' /usr/local/bin/proxy
 
