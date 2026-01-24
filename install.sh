@@ -299,7 +299,7 @@ sysctl net.ipv4.tcp_congestion_control
 lsmod | grep bbr || echo "BBR not loaded"
 
 echo
-echo "🎉 Optimization completed for 8GB VPS!"
+echo "🎉 Optimization completed for VPS!"
 EOF'
 
 chmod +x /usr/local/bin/vps-optimize.sh
