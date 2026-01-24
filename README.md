@@ -23,7 +23,7 @@ screen -r rere
 8. Auto delete expired account.
 9. Boleh recovery expired & deleted account.
 10. Xray Core Changer by NevermoreSSH.
-11. BBR Plus & performance tweak.
+11. Install BBR & performance tweak.
 12. Auto swap RAM 4GB.
 13. Auto reboot jam 5:00AM setiap hari.
 14. Auto clean log & cache setiap minggu.
