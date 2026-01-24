@@ -7,24 +7,22 @@
 # ========================================
 R='\e[1;31m'
 P='\e[0;35m'
-B='\033[0;36m'
-G='\033[0;32m'
-NC='\e[0m'
+B='\e[0;36m'
+G='\e[0;32m'
 N='\e[0m'
 red='\e[1;31m'
-green='\e[0;32m'
 purple='\e[0;35m'
 orange='\e[0;33m'
-NC='\e[0m'
-NC='\033[0m' # No Color
-RED='\033[1;91m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-CYAN='\033[0;36m'
-BICyan='\033[1;96m'
-BIWhite='\033[1;97m'
+NC='\e[0m' # No Color
+RED='\e[1;91m'
+GREEN='\e[38;5;82m'
+YELLOW='\e[1;33m'
+CYAN='\e[0;36m'
+BICyan='\e[1;96m'
+BIWhite='\e[1;97m'
 HT='\e[38;5;82m'
-BYlw='\e[48;5;226m'
+KS='\e[1;33m' #kuning susu
+BYlw='\e[48;5;226m' #yellow backgroud
 # Xray-Core Version
 xrays_path=$(which xray)
 xrays_version=$("$xrays_path" --version 2>&1)
@@ -37,26 +35,25 @@ clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
 echo -e "\e[48;5;226;1;38;5;88m            XRAY CORE VERSION           \e[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
-echo -e "\033[1;37m    Xray Core Changer by NevermoreSSH\033[0m"
-echo -e "
-${BIWhite}       Current version : ${HT}v${current_version} ${NC}
- 
+${BIWhite}      Current version : ${HT}v${current_version} ${NC}
+${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC} | lolcat
    [\033[1;36m 1 \033[0m] Xray Core v1.5.4
    [\033[1;36m 2 \033[0m] Xray Core v1.6.1
    [\033[1;36m 3 \033[0m] Xray Core v1.7.2
    [\033[1;36m 4 \033[0m] Xray Core v1.7.5
    [\033[1;36m 5 \033[0m] Xray Core v1.8.4
    [\033[1;36m 6 \033[0m] Xray Core v${latest_version} ${HT}< latest${NC}
- 
+${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC} | lolcat
    [\033[1;36m 7 \033[0m] Xray Core Mod v1.6.5   
    [\033[1;36m 8 \033[0m] Xray Core Mod v1.7.2-1
    [\033[1;36m 9 \033[0m] Xray Core Mod v25.3.31
-
+${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC} | lolcat
   \033[1;36m  10.\033[0m Check Xray Core Version
   \033[1;36m   0.\033[0m Back to main menu"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
 echo -e " ✅ Xray Core Mod support custom / multi path."
 echo -e " ⚠️ Please reboot your VPS after change the version."
+echo -e "${KS} [ Xray Core Changer by NevermoreSSH ]${NC}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
 read -p "      Select options from 1–10 : " xcore
 echo -e ""
