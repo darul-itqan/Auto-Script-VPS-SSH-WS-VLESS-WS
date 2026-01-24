@@ -214,6 +214,9 @@ echo -e "Success Create Swap RAM"
 
 sed -i 's/\r$//' /usr/local/bin/proxy
 
+# Set MY Time
+sudo timedatectl set-timezone Asia/Kuala_Lumpur
+
 # Auto Reboot 5:00AM
 bash -c 'apt update -y && apt install -y cron && systemctl enable cron && systemctl start cron && sed -i "/reboot/d" /etc/crontab && echo "0 5 * * * root /sbin/reboot" >> /etc/crontab && systemctl restart cron && echo "✅ Auto reboot set to 5 AM daily"'
 
@@ -301,9 +304,6 @@ EOF'
 
 chmod +x /usr/local/bin/vps-optimize.sh
 sudo /usr/local/bin/vps-optimize.sh
-
-apt update -y
-apt install jq -y
 
 # Notification
 echo -e "Script Success Install."
