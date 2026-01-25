@@ -7,7 +7,7 @@ apt install wget curl openssl sudo binutils coreutils gnupg bc vnstat -y
 apt install sudo -y
 apt install htop lsof -y
 
-# Fix Multi Collor
+# Fix Multi Colour
 apt install ruby -y
 apt install lolcat -y
 gem install lolcat
@@ -58,7 +58,7 @@ while true; do
     if [[ -n "$domain" ]]; then
         break
     else
-        echo -e "\e[31m[!] Domain wajib diisi. Sila ulangi.\e[0m"
+        echo -e "\e[31m[!] Domain tidak boleh kosong, silakan ulangi.\e[0m"
     fi
 done
 
@@ -72,8 +72,6 @@ apt install dropbear -y
 bash <(curl -s https://raw.githubusercontent.com/FN-Rerechan02/tools/refs/heads/main/dropbear.sh)
 rm -f /etc/dropbear/dropbear_rsa_host_key
 dropbearkey -t rsa -f /etc/dropbear/dropbear_rsa_host_key
-rm -f /etc/dropbear/dropbear_dss_host_key
-dropbearkey -t dss -f /etc/dropbear/dropbear_dss_host_key
 rm -f /etc/dropbear/dropbear_ecdsa_host_key
 dropbearkey -t ecdsa -f /etc/dropbear/dropbear_ecdsa_host_key
 cd /etc/default
@@ -81,8 +79,7 @@ rm -f dropbear
 wget -qO dropbear "https://codeberg.org/Rerechan02/scvpn/raw/branch/main/files/dropbear"
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
-echo -e "
-<br><font color='green'><b> ┏━━━━━━━ ✫ ━━━━━━━┓</b></font>
+echo -e "<br><font color='green'><b> ┏━━━━━━━ ✫ ━━━━━━━┓</b></font>
 <br><font color='#FFA500'><b> 🌐 DarQan VPN Premium</b></font>
 <br><font color='green'><b> ┗━━━━━━━━━━━━━━━━━┛</b></font>
 <br><font color='#FF000E'>&ensp;<b> ⚠️ SILA PATUH❗️</b></font>
@@ -100,20 +97,6 @@ systemctl daemon-reload
 clear
 cd /root
 rm -fr dropbear*
-
-# Install DropBear 2024
-apt install --reinstall dropbear-bin dropbear -y
-apt-mark hold dropbear dropbear-bin
-apt install build-essential zlib1g-dev -y
-cd /usr/src
-wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2024.85.tar.bz2
-tar xjf dropbear-2024.85.tar.bz2
-cd dropbear-2024.85
-./configure
-make
-make install
-ls -l /usr/local/sbin/dropbear
-ln -sf /usr/local/sbin/dropbear /usr/sbin/dropbear
 
 # Install SSH WebSocket
 apt install python3 -y
@@ -202,7 +185,7 @@ echo "3 0 * * * root backup" >> /etc/crontab
 echo "5 0 * * * root fixlog" >> /etc/crontab
 
 # restart service
-systemctl daemon-reload
+systemctl daemon-relaod
 systemctl restart cron
 
 # Install Package Lain
@@ -222,11 +205,9 @@ clear
 echo -e "clear ; menu" > /root/.profile
 
 # Create Swap RAM
-echo -e "Creating Swap RAM"
-bash <(curl -s https://raw.githubusercontent.com/FN-Rerechan02/tools/refs/heads/main/swap.sh)
+echo -e "Creating Swap Ram"
+sh <(curl -s https://raw.githubusercontent.com/FN-Rerechan02/tools/refs/heads/main/swap.sh)
 echo -e "Success Create Swap RAM"
-
-sed -i 's/\r$//' /usr/local/bin/proxy
 
 # Install bacaan data bandwidth
 apt install jq -y
@@ -236,7 +217,6 @@ sudo apt install -y nginx
 sudo systemctl enable --now nginx
 sudo apt install ufw -y
 sudo ufw allow 80/tcp
-sudo ufw allow 443/tcp
 sudo ufw reload
 sudo systemctl enable nginx
 
@@ -270,6 +250,6 @@ chmod +x /usr/local/bin/autoclean.sh
 (crontab -l 2>/dev/null; echo "0 3 * * 0 /usr/local/bin/autoclean.sh >> /var/log/autoclean.log 2>&1") | crontab -
 
 # Notification
-echo -e "Script Success Install."
+echo -e " Script Success Install"
 rm -fr *.sh
 reboot
