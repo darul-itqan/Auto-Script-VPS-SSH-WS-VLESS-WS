@@ -101,9 +101,8 @@ clear
 cd /root
 rm -fr dropbear*
 
-apt install --reinstall dropbear-bin dropbear -y
-
 # Install DropBear 2024
+apt install --reinstall dropbear-bin dropbear -y
 apt-mark hold dropbear dropbear-bin
 apt install build-essential zlib1g-dev -y
 cd /usr/src
