@@ -270,68 +270,6 @@ chmod +x /usr/local/bin/autoclean.sh
 
 (crontab -l 2>/dev/null; echo "0 3 * * 0 /usr/local/bin/autoclean.sh >> /var/log/autoclean.log 2>&1") | crontab -
 
-# BBR & performance tweak
-sudo bash -c 'cat > /usr/local/bin/vps-optimize.sh << "EOF"
-#!/bin/bash
-
-echo "🚀 Starting VPS optimization..."
-
-# 1️⃣ Update package list only
-apt update -y
-
-# 2️⃣ Enable BBR
-modprobe tcp_bbr
-echo "tcp_bbr" > /etc/modules-load.d/bbr.conf
-
-# 3️⃣ Sysctl tuning
-cat > /etc/sysctl.d/99-vps-vpn-tune.conf << SYSCTL
-# BBR
-net.core.default_qdisc = fq
-net.ipv4.tcp_congestion_control = bbr
-
-# TCP Buffer (optimized for 8GB RAM)
-net.core.rmem_max = 12582912
-net.core.wmem_max = 12582912
-net.ipv4.tcp_rmem = 4096 1048576 12582912
-net.ipv4.tcp_wmem = 4096 1048576 12582912
-
-# TCP performance
-net.ipv4.tcp_fastopen = 3
-net.ipv4.tcp_mtu_probing = 1
-net.ipv4.tcp_fin_timeout = 15
-net.ipv4.tcp_max_syn_backlog = 16384
-net.core.somaxconn = 32768
-
-# System limits
-fs.file-max = 2097152
-vm.swappiness = 10
-SYSCTL
-
-sysctl --system
-
-# 4️⃣ File descriptor limits
-cat > /etc/security/limits.d/99-vps-limits.conf << LIMITS
-* soft nofile 100000
-* hard nofile 100000
-root soft nofile 100000
-root hard nofile 100000
-LIMITS
-
-ulimit -n 100000
-
-# 5️⃣ Verify
-echo
-echo "✅ BBR status:"
-sysctl net.ipv4.tcp_congestion_control
-lsmod | grep bbr || echo "BBR not loaded"
-
-echo
-echo "🎉 Optimization completed for VPS!"
-EOF'
-
-chmod +x /usr/local/bin/vps-optimize.sh
-sudo /usr/local/bin/vps-optimize.sh
-
 # Notification
 echo -e "Script Success Install."
 rm -fr *.sh
