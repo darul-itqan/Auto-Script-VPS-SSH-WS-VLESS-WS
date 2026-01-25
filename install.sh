@@ -238,7 +238,6 @@ sudo apt install ufw -y
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 sudo ufw reload
-sudo systemctl status nginx
 sudo systemctl enable nginx
 
 # Set MY Time
