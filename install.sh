@@ -48,9 +48,9 @@ cd
 # Set Data Domain Server
 clear
 echo -e "
-++++++++++++++++++++++++++++++++++++++++++
-         INPUT DOMAIN FOR SERVER
-++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++
+        INPUT DOMAIN FOR SERVER
+++++++++++++++++++++++++++++++++++++++++
 "
 
 while true; do
