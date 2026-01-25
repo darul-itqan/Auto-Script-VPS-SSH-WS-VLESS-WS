@@ -234,6 +234,7 @@ apt install jq -y
 # Open Port 80 & 443
 sudo apt install -y nginx
 sudo systemctl enable --now nginx
+sudo apt install ufw -y
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 sudo ufw reload
