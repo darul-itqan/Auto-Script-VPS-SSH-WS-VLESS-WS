@@ -212,14 +212,6 @@ echo -e "Success Create Swap RAM"
 # Install bacaan data bandwidth
 apt install jq -y
 
-# Open Port 80 & 443
-sudo apt install -y nginx
-sudo systemctl enable --now nginx
-sudo apt install ufw -y
-sudo ufw allow 80/tcp
-sudo ufw reload
-sudo systemctl enable nginx
-
 # Set MY Time
 sudo timedatectl set-timezone Asia/Kuala_Lumpur
 
