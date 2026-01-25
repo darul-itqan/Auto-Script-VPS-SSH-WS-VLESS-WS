@@ -101,6 +101,21 @@ clear
 cd /root
 rm -fr dropbear*
 
+apt install --reinstall dropbear-bin dropbear -y
+
+# Install DropBear 2024
+apt-mark hold dropbear dropbear-bin
+apt install build-essential zlib1g-dev -y
+cd /usr/src
+wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2024.85.tar.bz2
+tar xjf dropbear-2024.85.tar.bz2
+cd dropbear-2024.85
+./configure
+make
+make install
+ls -l /usr/local/sbin/dropbear
+ln -sf /usr/local/sbin/dropbear /usr/sbin/dropbear
+
 # Install SSH WebSocket
 apt install python3 -y
 cd /usr/local/bin
@@ -216,6 +231,10 @@ sed -i 's/\r$//' /usr/local/bin/proxy
 
 # Install bacaan data bandwidth
 apt install jq -y
+
+# Open Port 80
+sudo apt install -y nginx
+sudo systemctl enable --now nginx
 
 # Set MY Time
 sudo timedatectl set-timezone Asia/Kuala_Lumpur
