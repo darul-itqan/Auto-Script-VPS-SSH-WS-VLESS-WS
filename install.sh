@@ -214,6 +214,9 @@ echo -e "Success Create Swap RAM"
 
 sed -i 's/\r$//' /usr/local/bin/proxy
 
+# Install bacaan data bandwidth
+apt install jq -y
+
 # Set MY Time
 sudo timedatectl set-timezone Asia/Kuala_Lumpur
 
