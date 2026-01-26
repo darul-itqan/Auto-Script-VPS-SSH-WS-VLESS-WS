@@ -139,7 +139,7 @@ class ConnectionHandler(threading.Thread):
     def findHeader(self, head, header):
         head = head.decode(errors='ignore')
         header = header.decode(errors='ignore')
-        for line in head.split('\r\n'):
+        for line in head.split('\n'):
             if line.startswith(header + ': '):
                 return line.split(': ', 1)[1]
         return ''
@@ -216,5 +216,6 @@ def main():
 if __name__ == '__main__':
     parse_args(sys.argv[1:])
     main()
+
 
 
