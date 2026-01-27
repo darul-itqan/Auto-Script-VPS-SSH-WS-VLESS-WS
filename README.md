@@ -1,24 +1,24 @@
-## DarQan Auto script VPS
-### SSH WebSocket & VLESS WebSocket
-### for Debian 11 & 12
-1. Update Debian
+## 📌 DarQan Auto script VPS
+### ✅ SSH WebSocket & VLESS WebSocket
+### ✅ for Debian 11 & 12
+1️⃣ Update Debian
 ```shell
 apt update -y
 ```
-2. Upgrade Debian
+2️⃣ Upgrade Debian
 ```shell
 apt full-upgrade -y
 ```
-3. Install
+3️⃣ Install
 ```shell
 apt update ; apt install wget curl openssl perl screen -y ; wget -q https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/main/install.sh ; chmod +x install.sh ; screen -S rere ./install.sh; if [ $? -ne 0 ]; then rm -f install.sh; fi
 ```
-### Note
+### ⚠️ Note
 If disconnect in installation process, just relogin and copy-paste this command
 ```shell
 screen -r rere
 ```
-## Features & Options DarQan Auto Script
+## ✅ Features & Options DarQan Auto Script
 1. Hanya protocol SSH WS & VLESS WS sahaja.
 2. Custom UUID.
 3. Custom path (VLESS).
@@ -33,20 +33,20 @@ screen -r rere
 12. Auto reboot jam 5:00AM setiap hari.
 13. Auto clean log & cache setiap minggu.
 
-### Install BBR & performance tweak:
-VPS RAM 1GB
+### ✅ Install BBR & performance tweak:
+🔸 VPS RAM 1GB
 ```shell
-wget "https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR-Tweak-VPS-1GB"
+wget https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR-Tweak-VPS-1GB
 ```
-VPS RAM 2GB
+🔸 VPS RAM 2GB
 ```shell
-wget "https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR-Tweak-VPS-2GB"
+wget https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR-Tweak-VPS-2GB
 ```
-VPS RAM 4GB
+🔸 VPS RAM 4GB
 ```shell
-wget "https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR-Tweak-VPS-4GB"
+wget https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR-Tweak-VPS-4GB
 ```
-VPS RAM 8GB
+🔸 VPS RAM 8GB
 ```shell
-wget "https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR-Tweak-VPS-8GB"
+wget https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR-Tweak-VPS-8GB
 ```
