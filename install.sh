@@ -79,18 +79,18 @@ rm -f dropbear
 wget -qO dropbear "https://codeberg.org/Rerechan02/scvpn/raw/branch/main/files/dropbear"
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
-echo -e "<br><font color='green'><b> ┏━━━━━━━ ✫ ━━━━━━━┓</b></font>
+echo -e "<br><font color='green'><b> ┏━━━━━ ✫ ━━━━━┓</b></font>
 <br><font color='#FFA500'><b> 🌐 DarQan VPN Premium</b></font>
-<br><font color='green'><b> ┗━━━━━━━━━━━━━━━━━┛</b></font>
+<br><font color='green'><b> ┗━━━━━━━━━━━━┛</b></font>
 <br><font color='#FF000E'>&ensp;<b> ⚠️ SILA PATUH❗️</b></font>
 <br><font color='#8A95FF'>&ensp;<b> ❌ Multi login</b></font>
 <br><font color='#52fc03'>&ensp;<b> ❌ Torrent</b></font>
 <br><font color='#FF69B4'>&ensp;<b> ❌ DDOS</b></font>
-<br><font color='#FFA500'><b> ┏━━━━━━━━ DarQan VPN ━━━━━━━━━┓</b></font>
+<br><font color='#FFA500'><b> ┏━━━━━━ DarQan VPN ━━━━━━┓</b></font>
 <br><font color='#8A95FF'><b> 🇲🇾 Server MY (Shinjiru)</b></font>
 <br><font color='yellow'><b> 🚀 Max speed: 200 Mbps</b></font>
 <br><font color='#FF69B4'><b> 📝 Beli VPN: Telegram @HarisTakiri</b></font>
-<br><font color='#FFA500'><b> ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</b></font>" > /etc/issue.net
+<br><font color='#FFA500'><b> ┗━━━━━━━━━━━━━━━━━━━┛</b></font>" > /etc/issue.net
 clear
 systemctl daemon-reload
 /etc/init.d/dropbear restart
