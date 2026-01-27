@@ -36,7 +36,17 @@ screen -r rere
 ### Install BBR & performance tweak:
 VPS RAM 1GB
 ```shell
-wget "https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR%20%26%20Tweak%20VPS%201GB"
+wget "https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR-Tweak-VPS-1GB"
+```
+VPS RAM 2GB
+```shell
+wget "https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR-Tweak-VPS-2GB"
 ```
 VPS RAM 4GB
+```shell
+wget "https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR-Tweak-VPS-4GB"
+```
 VPS RAM 8GB
+```shell
+wget "https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/refs/heads/main/BBR-Tweak-VPS-8GB"
+```
