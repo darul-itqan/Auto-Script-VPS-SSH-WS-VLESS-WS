@@ -7,7 +7,7 @@ apt update -y
 ```
 2️⃣ Upgrade Debian
 ```shell
-apt full-upgrade -y
+apt full-upgrade -y && reboot
 ```
 3️⃣ Install (please reboot after install)
 ```shell
