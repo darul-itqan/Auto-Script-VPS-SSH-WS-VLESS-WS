@@ -241,7 +241,9 @@ chmod +x /usr/local/bin/autoclean.sh
 
 (crontab -l 2>/dev/null; echo "0 3 * * 0 /usr/local/bin/autoclean.sh >> /var/log/autoclean.log 2>&1") | crontab -
 
+# Buang kod \r dalam script
+sed -i 's/\r$//' /usr/local/bin/proxy
+
 # Notification
-echo -e " Script Success Install"
+echo -e "Script Success Install 💯✅"
 rm -fr *.sh
-reboot
