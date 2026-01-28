@@ -1,6 +1,6 @@
 ## 📌 DarQan Auto script VPS
 ### ✅ SSH WebSocket & VLESS WebSocket
-### ✅ for Debian 11 & 12
+### 🍥 for Debian 11 & 12
 1️⃣ Update Debian
 ```shell
 apt update -y
