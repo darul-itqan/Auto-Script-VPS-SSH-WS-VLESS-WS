@@ -9,7 +9,7 @@ apt update -y
 ```shell
 apt full-upgrade -y
 ```
-3️⃣ Install
+3️⃣ Install (please reboot after install)
 ```shell
 apt update ; apt install wget curl openssl perl screen -y ; wget -q https://raw.githubusercontent.com/darul-itqan/Auto-Script-VPS-SSH-WS-VLESS-WS/main/install.sh ; chmod +x install.sh ; screen -S rere ./install.sh; if [ $? -ne 0 ]; then rm -f install.sh; fi
 ```
